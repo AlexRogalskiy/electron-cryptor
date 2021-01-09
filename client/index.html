@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>BitCrypt</title>
+    <script src="app.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="app.css" type="text/css"/>
+  </head>
+  <body unselectable="on" onselectstart="return false;">
+    <header class="title-bar"></header>
+    <main-area>
+      <drop-zone id="lock-zone"></drop-zone>
+      <drop-zone id="unlock-zone"></drop-zone>
+    </main-area>
+    <div class="switch">
+        <input id="delete-files" class="cmn-toggle cmn-toggle-round" type="checkbox">
+        <label for="delete-files"></label>
+        <span>Delete original files</span>
+      </div>
+    <prompt-box id="unlock-prompt">
+      <form>
+        <div class="prompt-title mb05em"></div>
+        <input required id="password-input" name="password-input" type="password" placeholder="password" class="mb05em"/>
+        <span id="error-message" class="mb05em"></span>
+        <button id="password-button-ok" type="submit">OK</button>
+        <button id="password-button-cancel" type="button">Cancel</button>
+        <span id="password-hint"></span>
+      </form>
+    </prompt-box>
+    <prompt-box id="lock-prompt">
+      <form>
+        <div class="prompt-title mb05em"></div>
+        <div class="input-col mb05em">
+          <input required id="password-input" name="password-input" type="password" placeholder="password"/>
+          <input required id="confirm-input" name="confirm-input" type="password" placeholder="confirm"/>
+        </div>
+        <div class="mb05em">Please enter a password hint:</div>
+        <input required id="hint-input" name="hint-input" type="text" class="mb05em"/>
+        <button id="password-button-ok" type="submit">OK</button>
+        <button id="password-button-cancel" type="button">Cancel</button>
+      </form>
+    </prompt-box>
+    <div class="progress-bar blue stripes">
+        <span style="width: 40%"></span>
+    </div>
+  </body>
+</html>
